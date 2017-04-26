@@ -108,26 +108,41 @@ pre
 .hero
     background-color: $grey-color
     color: #fff
-    a:hover
-        color: gold
+    a
+        color: $grey-color-dark
+    [data-btn]
+        &:hover, &:focus, &:active
+            background-color: $grey-color-dark
+            border-color: $grey-color-dark
+            color: $grey-color-light
     &.brand
         background-color: $brand-color
-        color: $grey-color-light
+        color: #000
         a
-            color: gold
-            &:before
-                background-color: rgba($grey-color-dark, .3)
-        [data-btn]
-            border-color: currentcolor
-            &:hover
-                background-color: gold
-                color: $brand-color
+            color: $verde
     &.light
         background-color: $grey-color-light
-        color: $grey-color-dark
+        color: $verde
     &.dark
         background-color: $grey-color-dark
         color: $grey-color-light
+        a
+            color: $brand-color
+        [data-btn]
+            &:hover, &:focus, &:active
+                background-color: $brand-color
+                border-color: $brand-color
+                color: #000
+    &.green
+        background-color: $verde
+        color: $grey-color-light
+        a
+            color: $brand-color
+        [data-btn]
+            &:hover, &:focus, &:active
+                background-color: $brand-color
+                border-color: $brand-color
+                color: #000
 
 .video-frame
     height: 0
@@ -143,6 +158,17 @@ pre
         content: ""
         display: table
         clear: both
+
+.svg-container
+    > svg
+        display: inline-block
+        max-width: 100%
+        max-height: 100%
+    &.inherit-color
+        > svg
+            color: inherit
+            path, polygon, rect, circ
+                fill: currentcolor
 
 .icon, .icon-colored
     > svg
@@ -182,13 +208,16 @@ pre
     text-decoration: none
     text-align: center
     padding: .3em 1em
-    border-radius: 500px
-    border: 1px solid $brand-color
+    border-radius: 4px
+    border: 1px solid
+    +variant(round)
+        border-radius: 500px
     +variant(nbr)
         @extend .nbr
     &:hover, &:active, &:focus
         background-color: $brand-color
-        color: #fff
+        color: $verde
+        text-decoration: none
     &:before
         content: initial
 
