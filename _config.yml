@@ -1,0 +1,26 @@
+title: COPA
+description: > 
+  Adicionar uma descrição da empresa aqui...
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://copatecnologia.github.io" # the base hostname & protocol for your site
+
+# Build settings
+exclude: 
+  - gulpfile.js
+  - README.md
+  - desktop.ini
+markdown: kramdown
+
+sass:
+  style: compressed
+
+gems:
+  - jekyll-coffeescript
+
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
