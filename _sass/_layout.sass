@@ -1,7 +1,11 @@
 .site-header
     min-height: 56px
-    position: relative
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
     border-bottom: 1px solid $grey-color-light
+    z-index: 999
 
 .site-title
     font-size: 26px
@@ -137,3 +141,33 @@
         ul, ol
             +media-greater($on-palm)
                 padding-left: $spacing-unit * 1.5
+
+.section-hero
+    padding: 10% 0
+    background:
+        image: url('/img/jacob-sapp-sm.jpg')
+        position: right
+        repeat: no-repeat
+        size: cover
+    position: relative
+    > *
+        position: relative
+        z-index: 9
+    &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 1
+        background-color: rgba($grey-color-light, .8)
+
+.section-camera
+    padding: 10% 0
+    background:
+        image: url('/img/florian-klauer-sm.jpg')
+        position: center
+        repeat: no-repeat
+        size: cover
