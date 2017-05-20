@@ -17,6 +17,9 @@ sass:
 gems:
   - jekyll-coffeescript
 
+collections:
+  sections:
+    output: false
 
 defaults:
   - scope:

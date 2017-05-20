@@ -55,7 +55,9 @@ h1, h2, h3, h4, h5, h6
 
 @for $i from 1 through 6
     h#{$i}
-        font-size: $base-font-size * 2.4 + ($base-font-size / $i)
+        font-size: $base-font-size + 42 / $i
+        @if $i == 6
+            color: $grey-color
 
 a
     color: $brand-color

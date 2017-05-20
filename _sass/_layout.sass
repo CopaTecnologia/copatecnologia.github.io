@@ -4,19 +4,24 @@
     top: 0
     left: 0
     right: 0
-    border-bottom: 1px solid $grey-color-light
     z-index: 999
-
+    background-color: rgba($grey-color-light, .5)
+    a
+        &, &:visited
+            color: $verde
+        &:hover, &:focus
+            text-decoration: none
+            color: $grey-color-dark
 .site-title
-    font-size: 26px
-    font-weight: 300
+    font:
+        size: 26px
+        weight: 300
+        family: $title-font-family
     line-height: 56px
     letter-spacing: -1px
     margin-top: 0
     margin-bottom: 0
     float: left
-    &, &:visited
-        color: $grey-color-dark
 
 .site-nav
     float: right
@@ -24,7 +29,12 @@
     .menu-icon
         display: none
     .page-link
-        color: $text-color
+        color: $verde
+        font:
+            family: $ui-font-family
+            weight: bold
+        text-transform: uppercase
+        letter-spacing: -1px
         line-height: $base-line-height
         margin-left: 20px
     +media-query($on-palm)
@@ -162,7 +172,16 @@
         right: 0
         bottom: 0
         z-index: 1
-        background-color: rgba($grey-color-light, .8)
+        background-color: rgba($grey-color-light, .7)
+
+.section-servicos
+    .servicos-item
+        text-align: center
+    .svg-container
+        svg
+            max-width: 120px
+    .servicos-title
+        font-size: 20px
 
 .section-camera
     padding: 10% 0
