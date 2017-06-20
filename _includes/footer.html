@@ -1,9 +1,25 @@
 <footer class="site-footer">
 
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-    <p>{{ site.description }}</p>
+  <div class="wrapper" data-grid="spacing">
+    <div data-cell="1of3" data-grid="column justify">
+        <h2 class="footer-heading" data-cell="shrink">{{ site.title }}</h2>
+        <p data-cell="">CRIATIVIDADE <br> ORGANIZAÇÃO <br> PROCESSOS <br> APRENDIZAGEM</p>
+        <ul class="seamless" data-cell="shrink">
+          <li><a href="{{ site.baseurl }}/">Início</a></li>
+          {% for my_page in site.pages %}
+            {% if my_page.menu-title %}
+            <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.menu-title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+    </div>
+    <form action="" data-cell="2of3" id="contato">
+      <h3>Fale conosco</h3>
+      <p><label for="nome">Nome</label><input type="text" name="nome" required placeholder=""></p>
+      <p><label for="email">E-mail</label><input type="email" name="email" required placeholder=""></p>
+      <p><label for="msg"></label><textarea name="msg" cols="30" rows="5" placeholder="Digite a sua mensagem..."></textarea></p>
+      <p><button>Enviar</button></p>
+    </form>
 
   </div>
 
