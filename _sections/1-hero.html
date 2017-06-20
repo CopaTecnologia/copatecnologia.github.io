@@ -1,20 +1,21 @@
 ---
 name: hero
-class: hero light
+class: ''
 title: Início
 ---
 
-<div class="wrapper" data-grid="center spacing">
+<div class="wrapper" data-grid="center column" data-text="center">
 
-    <div data-cell="1of3" class="svg-container inherit-color">
+    <div class="svg-container inherit-color">
         {% include favicon.svg %}
     </div>
 
-    <div data-cell="2of3">
-        <h2>COPA</h2>
-        <p><strong>CRIATIVIDADE &#8226; ORGANIZAÇÃO &#8226; PROCESSOS &#8226; APRENDIZAGEM</strong></p>
-        <p>Coloque uma frase de efeito aqui.</p>
-        <p><a href="/sobre/" data-btn="">Saiba mais!</a> <a href="#contato" data-btn="">Entre em contato...</a></p>
-    </div>
+    <h2>COPA TECNOLOGIA</h2>
+    <p data-text="sm">CRIATIVIDADE &#8226; ORGANIZAÇÃO &#8226; PROCESSOS &#8226; APRENDIZAGEM</p>
+    <p class="hero-cta" data-text="nbr"><a href="/sobre/" data-btn="">Saiba mais!</a> <a href="#contato" data-btn="">Entre em contato...</a></p>
 
+</div>
+
+<div class="video-bg">
+    <video src="{{ site.baseurl }}/video/B-Roll-Camera-Lens.mp4" loop autoplay></video>
 </div>
