@@ -66,6 +66,7 @@ a
     &:hover, &:focus
         color: $text-color
         text-decoration: underline
+        outline: none
 
 blockquote
     padding-left: $spacing-unit
@@ -211,15 +212,17 @@ pre
     text-align: center
     padding: .3em 1em
     border-radius: 4px
-    border: 1px solid
+    border: 1px solid $brand-color
+
     +variant(round)
         border-radius: 500px
     +variant(nbr)
         @extend .nbr
     &:hover, &:active, &:focus
         background-color: $brand-color
-        color: $verde
+        color: #000
         text-decoration: none
+        outline: none
     &:before
         content: initial
 
@@ -280,3 +283,5 @@ pre
         color: $grey-color
     +variant(brand)
         color: $brand-color
+    +variant(nbr)
+        @extend .nbr
