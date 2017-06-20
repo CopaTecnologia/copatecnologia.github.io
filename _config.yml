@@ -2,7 +2,7 @@ title: COPA TECNOLOGIA
 description: > 
   Adicionar uma descrição da empresa aqui...
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://copatecnologia.github.io" # the base hostname & protocol for your site
+url: "http://copatecnologia.com.br" # the base hostname & protocol for your site
 
 # Build settings
 exclude: 
