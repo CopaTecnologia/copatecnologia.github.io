@@ -3,6 +3,10 @@ layout: page
 title: Sobre a COPA Tecnologia
 menu-title: A Copa
 permalink: /sobre/
+excerpt: >
+    Profissionais das áreas da educação, comunicação e tecnologia.
+    Desenvolvemos soluções educacionais, corporativas e de comunicação.
+    Entre em contato e solicite a nossa visita na sua empresa.
 ---
 
 A COPA TECNOLOGIA foi fundada a partir da parceria entre profissionais das áreas da educação, comunicação e tecnologia, com o objetivo de atender instituições de ensino, empresas e profissionais, no desenvolvimento de soluções educacionais, corporativas e de comunicação.
