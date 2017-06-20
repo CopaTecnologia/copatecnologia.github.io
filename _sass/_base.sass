@@ -50,7 +50,7 @@ li
 h1, h2, h3, h4, h5, h6
     font:
         family: $title-font-family
-        weight: $base-font-weight
+        weight: 600
     line-height: 1.2
 
 @for $i from 1 through 6
@@ -209,8 +209,9 @@ pre
 
 +module(btn)
     display: inline-block
-    text-decoration: none
     text-align: center
+    text-decoration: none
+    font-family: $ui-font-family
     padding: .3em 1em
     border-radius: 4px
     border: 1px solid $brand-color
