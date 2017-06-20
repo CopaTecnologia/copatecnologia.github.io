@@ -6,11 +6,14 @@ layout: compress
 
   {% include head.html %}
 
-  <body>
+  <body><a name="topo"></a>
 
     {% include header.html %}
     {{ content }}
     {% include footer.html %}
+
+    <script src="{{ site.baseurl }}/js/scroll.js"></script>
+    <script src="{{ site.baseurl }}/js/main.js"></script>
 
   </body>
 
