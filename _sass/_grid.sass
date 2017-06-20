@@ -48,10 +48,11 @@
 
     +variant(spacing)
         +media-greater($on-palm)
-            > :not(:last-child):not([data-cell~="order-1"])
+            > :not(:last-child)
                 margin-right: $spacing-unit
             > [data-cell~="order-1"]
                 margin-left: $spacing-unit
+                margin-right: 0
 
         +media-query($on-palm)
             > *
@@ -59,7 +60,7 @@
 
     +variant(small-spacing)
         +media-greater($on-palm)
-            > :not(:last-child):not([data-cell~="order-1"])
+            > :not(:last-child)
                 margin-right: $spacing-unit / 4
             > [data-cell~="order-1"]
                 margin-left: $spacing-unit / 4
