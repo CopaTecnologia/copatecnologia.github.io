@@ -166,11 +166,22 @@
         bottom: 0
         z-index: 1
         background-color: rgba(#000, .8)
+    .svg-container
+        +media-query($on-palm)
+            max-width: 300px
+        +media-greater($on-palm)
+            transform: translate(-20px)
     .hero-title
-        font-size: 80px
+        margin-top: -110px
+        font:
+            size: 80px
+            weight: 400
         letter-spacing: .1em
-        +media-greater($on-laptop)
-            font-size: 10vmax
+        +media-query($on-palm)
+            transform: translate(10px)
+        +media-greater($on-palm)
+            margin-top: -60px
+            font-size: 140px
     .hero-cta
         +media-query($on-palm)
             font-size: $small-font-size
