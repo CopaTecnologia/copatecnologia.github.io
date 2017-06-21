@@ -2,25 +2,47 @@
 
   <div class="wrapper" data-grid="spacing">
     <div data-cell="1of3" data-grid="column justify">
-        <h2 class="footer-heading" data-cell="shrink">{{ site.title }}</h2>
-        <p data-cell="">CRIATIVIDADE <br> ORGANIZAÇÃO <br> PROCESSOS <br> APRENDIZAGEM</p>
-        <ul class="seamless" data-cell="shrink">
-          <li><a href="{{ site.baseurl }}/">Início</a></li>
-          {% for my_page in site.pages %}
-            {% if my_page.menu-title %}
+
+      <h2 class="footer-heading" data-cell="shrink">{{ site.title }}</h2>
+      <p data-cell="">CRIATIVIDADE <br> ORGANIZAÇÃO <br> PROCESSOS <br> APRENDIZAGEM</p>
+
+      <ul class="seamless" data-cell="shrink">
+        <li><a href="{{ site.baseurl }}/">Início</a></li>
+        {% for my_page in site.pages %}
+          {% if my_page.menu-title %}
+
             <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.menu-title }}</a></li>
-            {% endif %}
-          {% endfor %}
-          <li><a href="#topo">Topo</a></li>
-        </ul>
+
+          {% endif %}
+        {% endfor %}
+      </ul>
+
     </div>
+
     <form action="http://{{ site.url | replace: 'http://', 'server.' }}/enviar_email.php" method="post" data-cell="2of3" id="contato">
+
       <h3>Fale conosco</h3>
-      <p><label for="nome">Nome</label><input type="text" name="nome" required placeholder="Informe o seu nome"></p>
-      <p><label for="email">E-mail</label><input type="email" name="email" required placeholder="nome@dominio.com.br"></p>
-      <p><label for="mensagem"></label><textarea name="mensagem" cols="30" rows="5" placeholder="Digite a sua mensagem..."></textarea></p>
-      <p class="honeypot"><label for="honeypot">Se estiver vendo isto, deixe este campo vazio:</label><input type="text" name="honeypot"></p>
-      <p><button>Enviar</button></p>
+      <p>
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" required placeholder="Informe o seu nome">
+      </p>
+      <p>
+        <label for="email">E-mail</label>
+        <input type="email" name="email" required placeholder="nome@dominio.com.br">
+      </p>
+      <p>
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" cols="30" rows="5" placeholder="Digite a sua mensagem..."></textarea>
+      </p>
+      <p class="honeypot">
+        <label for="honeypot">Se estiver vendo isto, deixe este campo vazio:</label>
+        <input type="text" name="honeypot">
+      </p>
+      <p data-grid="center justify spacing">
+        <button data-cell="shrink">Enviar</button>
+        <a href="#topo" data-cell="shrink">Voltar ao topo</a>
+      </p>
+
     </form>
 
   </div>
