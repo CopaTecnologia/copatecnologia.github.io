@@ -112,42 +112,22 @@ pre
     background-color: $grey-color
     color: #fff
     a
-        color: $grey-color-dark
-    [data-btn]
-        &:hover, &:focus, &:active
-            background-color: $grey-color-dark
-            border-color: $grey-color-dark
-            color: $grey-color-light
+        color: $brand-color
     &.brand
         background-color: $brand-color
         color: #000
         a
-            color: $verde
+            color: #fff
         [data-btn]
-            border-color: $verde
+            background-color: $brand-shadow
+            &:hover, &:focus, &:active
+                background-color: #000
     &.light
         background-color: $grey-color-light
-        color: $verde
+        color: $grey-color-dark
     &.dark
         background-color: $grey-color-dark
         color: $grey-color-light
-        a
-            color: $brand-color
-        [data-btn]
-            &:hover, &:focus, &:active
-                background-color: $brand-color
-                border-color: $brand-color
-                color: #000
-    &.green
-        background-color: $verde
-        color: $grey-color-light
-        a
-            color: $brand-color
-        [data-btn]
-            &:hover, &:focus, &:active
-                background-color: $brand-color
-                border-color: $brand-color
-                color: #000
 
 .video-frame
     height: 0

@@ -2,6 +2,38 @@
 layout: default
 ---
 
+
+<div class="page-content">
+    <div class="wrapper">
+        <p><a href="">Link</a></p>
+        <p><a href="" data-btn="">Botão</a></p>
+    </div>
+</div>
+<div class="page-content hero light">
+    <div class="wrapper">
+        <p><a href="">Link</a></p>
+        <p><a href="" data-btn="">Botão</a></p>
+    </div>
+</div>
+<div class="page-content hero">
+    <div class="wrapper">
+        <p><a href="">Link</a></p>
+        <p><a href="" data-btn="">Botão</a></p>
+    </div>
+</div>
+<div class="page-content hero dark">
+    <div class="wrapper">
+        <p><a href="">Link</a></p>
+        <p><a href="" data-btn="">Botão</a></p>
+    </div>
+</div>
+<div class="page-content hero brand">
+    <div class="wrapper">
+        <p><a href="">Link</a></p>
+        <p><a href="" data-btn="">Botão</a></p>
+    </div>
+</div>
+
 {% for section in site.sections %}
 <section class="page-content {{ section.class }} section-{{ section.name }}" id="{{ section.name }}">
   {{ section.content }}
