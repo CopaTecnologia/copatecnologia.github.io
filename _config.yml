@@ -22,6 +22,8 @@ gems:
 collections:
   sections:
     output: false
+  parcerias:
+    output: true
 
 defaults:
   - scope:
@@ -29,3 +31,8 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: ""
+      type: parcerias
+    values:
+      layout: page
