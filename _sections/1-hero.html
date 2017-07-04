@@ -17,5 +17,10 @@ title: Início
 </div>
 
 <div class="video-bg">
-    <video src="{{ site.baseurl }}/video/B-Roll-Camera-Lens.mp4" loop autoplay muted></video>
+    <video id="top-video-background" src="{{ site.baseurl }}/video/B-Roll-Camera-Lens.mp4" autoplay loop muted playsinline></video>
+    <script>
+        window.addEventListener('load', function(){
+            document.getElementById('top-video-background').play();
+        });
+    </script>
 </div>
