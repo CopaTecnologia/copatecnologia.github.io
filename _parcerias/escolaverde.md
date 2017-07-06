@@ -1,5 +1,5 @@
 ---
-title: Proposta de parceria Colégio Escola Verde e Copa Tecnologia
+title: Proposta de parceria Escola Verde e Copa Tecnologia
 ---
 
 
