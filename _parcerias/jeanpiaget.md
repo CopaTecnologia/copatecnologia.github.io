@@ -1,6 +1,5 @@
 ---
 title: Proposta de parceria Colégio Jean Piaget e Copa Tecnologia
-permalink: jeanpiaget/
 ---
 
 

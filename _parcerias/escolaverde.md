@@ -1,6 +1,5 @@
 ---
 title: Proposta de parceria Colégio Escola Verde e Copa Tecnologia
-permalink: escolaverde/
 ---
 
 

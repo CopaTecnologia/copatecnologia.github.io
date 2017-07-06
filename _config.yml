@@ -36,3 +36,4 @@ defaults:
       type: parcerias
     values:
       layout: page
+      permalink: /:name/
