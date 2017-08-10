@@ -22,7 +22,7 @@ gems:
 collections:
   sections:
     output: false
-  parcerias:
+  educacional:
     output: true
 
 defaults:
@@ -33,7 +33,7 @@ defaults:
       layout: post
   - scope:
       path: ""
-      type: parcerias
+      type: educacional
     values:
-      layout: page
+      layout: educacional
       permalink: /:name/

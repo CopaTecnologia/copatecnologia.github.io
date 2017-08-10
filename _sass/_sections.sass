@@ -1,0 +1,84 @@
+.section
+
+    &-hero
+        position: relative
+        padding: 10% 0
+        color: #fff
+        > *
+            position: relative
+            z-index: 9
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            z-index: 1
+            background-color: rgba(#000, .8)
+        .svg-container
+            +media-query($on-palm)
+                width: 300px
+                height: 300px
+            +media-greater($on-palm)
+                transform: translate(-20px)
+        .hero-title
+            margin-top: -30px
+            font:
+                size: 80px
+                weight: 400
+            letter-spacing: .1em
+            +media-query($on-palm)
+                transform: translate(10px)
+            +media-greater($on-palm)
+                margin-top: -60px
+                font-size: 140px
+        .hero-cta
+            +media-query($on-palm)
+                font-size: $small-font-size
+        .video-bg
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            overflow: hidden
+            z-index: -1
+            video
+                position: absolute
+                top: 50%
+                left: 50%
+                min-width: 100%
+                min-height: 100%
+                transform: translate(-50%, -50%)
+
+    &-servicos
+        .servicos-item
+            text-align: center
+            p
+                max-width: 350px
+                margin-left: auto
+                margin-right: auto
+        .svg-container
+            svg
+                max-width: 120px
+        .servicos-title
+            font-size: 30px
+            height: 60px
+
+    &-camera
+        padding: 10% 0
+        background:
+            color: #000
+            image: url('/img/florian-klauer_ext.jpg')
+            position: center
+            repeat: no-repeat
+            size: cover
+        +media-query($on-palm)
+            background-position: 70%
+        .camera-inner
+            *
+                text-shadow: -1px 1px 3px #000
+            > p
+                max-width: 70%
