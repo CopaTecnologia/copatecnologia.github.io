@@ -45,8 +45,7 @@
             @extend %animated
             animation-duration: 1.5s
         .hero-cta
-            @extend %animated
-            animation-duration: 2.6s
+            overflow: visible
             +media-query($on-palm)
                 font-size: $small-font-size
         .video-bg
@@ -114,12 +113,8 @@
 
     &-camera
         padding: 10% 0
-        background:
-            color: #000
-            image: url('/img/florian-klauer_ext.jpg')
-            position: center
-            repeat: no-repeat
-            size: cover
+        background: #000 url('/img/florian-klauer_ext.jpg') center no-repeat fixed
+        background-size: cover
         +media-query($on-palm)
             background-position: 70%
         .camera-inner
