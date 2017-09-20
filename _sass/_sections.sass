@@ -17,7 +17,13 @@
             bottom: 0
             z-index: 1
             background-color: rgba(#000, .8)
+        %animated
+            animation: zoom-out .8s ease-in-out forwards
+            backface-visibility: hidden
+            transform: translate(0)
         .svg-container
+            animation: zoom-in .5s ease-in-out forwards
+            transform-origin: center bottom
             +media-query($on-palm)
                 width: 300px
                 height: 300px
@@ -29,12 +35,18 @@
                 size: 80px
                 weight: 400
             letter-spacing: .1em
+            @extend %animated
             +media-query($on-palm)
                 transform: translate(10px)
             +media-greater($on-palm)
                 margin-top: -60px
                 font-size: 140px
+        .hero-tagline
+            @extend %animated
+            animation-duration: 1.5s
         .hero-cta
+            @extend %animated
+            animation-duration: 2.6s
             +media-query($on-palm)
                 font-size: $small-font-size
         .video-bg
@@ -53,14 +65,47 @@
                 min-height: 100%
                 transform: translate(-50%, -50%)
 
+        @keyframes zoom-out
+
+            0%, 50%
+                opacity: 0
+                transform: scale(1.5)
+                filter: blur(5px)
+
+            100%
+                opacity: 1
+                transform: scale(1)
+                filter: blur(0)
+
+        @keyframes zoom-in
+
+            0%
+                opacity: 0
+                transform: scale(.1)
+
+            100%
+                opacity: 1
+                transform: scale(1)
+
     &-servicos
         .servicos-item
             text-align: center
+            perspective: 100px
             p
                 max-width: 350px
                 margin-left: auto
                 margin-right: auto
+                transition: .3s ease-in-out
+                transform: translateY(-80px) rotateX(-90deg)
+                backface-visibility: hidden
+            &:hover
+                .svg-container
+                    opacity: 0.1
+                    transform: scale(.9)
+                p
+                    transform: translateY(-120px)
         .svg-container
+            transition: .1s ease-in-out
             svg
                 max-width: 120px
         .servicos-title
