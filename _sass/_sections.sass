@@ -19,17 +19,23 @@
             z-index: 1
             background-color: rgba(#000, .8)
         %animated
+            -webkit-animation: zoom-out .8s ease-in-out forwards
             animation: zoom-out .8s ease-in-out forwards
+            -webkit-backface-visibility: hidden
             backface-visibility: hidden
+            -webkit-transform: translate(0)
             transform: translate(0)
         .svg-container
+            -webkit-animation: zoom-in .5s ease-in-out forwards
             animation: zoom-in .5s ease-in-out forwards
+            -webkit-transform-origin: center bottom
             transform-origin: center bottom
             +media-query($on-palm)
                 width: 260px
                 height: 260px
                 margin-top: 40px
             +media-greater($on-palm)
+                -webkit-transform: translate(-20px)
                 transform: translate(-20px)
         .hero-title
             margin-top: -30px
@@ -40,12 +46,14 @@
             @extend %animated
             +media-query($on-palm)
                 margin-bottom: 0
+                -webkit-transform: translate(10px)
                 transform: translate(10px)
             +media-greater($on-palm)
                 margin-top: -60px
                 font-size: 140px
         .hero-tagline
             @extend %animated
+            -webkit-animation-duration: 1.5s
             animation-duration: 1.5s
             +media-query($on-palm)
                 margin: 0
@@ -67,26 +75,41 @@
                 left: 50%
                 min-width: 100%
                 min-height: 100%
+                -webkit-transform: translate(-50%, -50%)
                 transform: translate(-50%, -50%)
 
-        @keyframes zoom-out
+        @-webkit-keyframes zoom-out
+            0%, 50%
+                opacity: 0
+                -webkit-transform: scale(1.5)
+                -webkit-filter: blur(5px)
+            100%
+                opacity: 1
+                -webkit-transform: scale(1)
+                -webkit-filter: blur(0)
 
+        @keyframes zoom-out
             0%, 50%
                 opacity: 0
                 transform: scale(1.5)
                 filter: blur(5px)
-
             100%
                 opacity: 1
                 transform: scale(1)
                 filter: blur(0)
 
-        @keyframes zoom-in
+        @-webkit-keyframes zoom-in
+            0%
+                opacity: 0
+                -webkit-transform: scale(.1)
+            100%
+                opacity: 1
+                -webkit-transform: scale(1)
 
+        @keyframes zoom-in
             0%
                 opacity: 0
                 transform: scale(.1)
-
             100%
                 opacity: 1
                 transform: scale(1)
@@ -95,6 +118,7 @@
         overflow: hidden
         .servicos-item
             text-align: center
+            -webkit-perspective: 100px
             perspective: 100px
             p
                 max-width: 350px
@@ -103,19 +127,25 @@
 
             +media-greater($on-laptop)
                 p
-                    transition: .3s ease-in-out
                     opacity: 0
+                    -webkit-transition: .3s ease-in-out
+                    transition: .3s ease-in-out
+                    -webkit-transform: translateY(-80px) rotateX(-90deg)
                     transform: translateY(-80px) rotateX(-90deg)
+                    -webkit-backface-visibility: hidden
                     backface-visibility: hidden
                 &:hover
                     .svg-container
                         opacity: 0.1
+                        -webkit-transform: scale(.9)
                         transform: scale(.9)
                     p
                         opacity: 1
+                        -webkit-transform: translateY(-120px)
                         transform: translateY(-120px)
 
         .svg-container
+            -webkit-transition: .1s ease-in-out
             transition: .1s ease-in-out
             svg
                 max-width: 120px
