@@ -22,7 +22,7 @@
     return scrollToY(scrollTarget - 20, 500, 'easeInOutQuint', function() {return false;});
   };
 
-  // document.body.addEventListener('touchstart', function(){}); /* Bug do Safari no menu: ativando eventos de toque na tela */
+  document.body.addEventListener('touchstart', function(){}); /* Bug do Safari no menu: ativando eventos de toque na tela */
 
   window.scrollToTarget = scrollToTarget;
 
