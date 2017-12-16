@@ -39,18 +39,17 @@
         top: 9px
         z-index: 999
         right: 9px
-        border-radius: 5px
         text-align: right
         overflow: hidden
-        box-shadow: -15px 15px 20px -15px black
         transform: translate(0)
         transition: .3s ease-in-out
         &:hover
-            padding: 25px
-            background-color: $background-color
             .menu-icon
                 opacity: .5
-                transform: scale(.75) translate(25px, -25px)
+                transform: scale(.5)
+            .trigger
+                display: block
+                padding: 25px 0
         .menu-icon
             display: block
             float: right
@@ -71,14 +70,16 @@
         .trigger
             clear: both
             display: none
-        &:hover .trigger
-            display: block
-            padding-bottom: 5px
+            background-color: $grey-color-dark
+            border-radius: 5px
         .page-link
             display: block
-            padding: 5px 10px
+            padding: 0 50px
             margin: 0
+            line-height: 50px
             opacity: 0
+            &:hover, &:focus, &:active
+                background-color: #000
             @for $i from 1 through 10
                 &:nth-of-type(#{$i})
                     animation: enter-from-right .4s .1s * ($i - 1) ease-in-out forwards
