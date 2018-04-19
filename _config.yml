@@ -1,39 +1,44 @@
+---
 title: COPA TECNOLOGIA
-description: >
-  Produção audiovisual, editorial, web e comunicação corporativa. 
-  Conteúdos educacionais, institucionais online e offline.
-  Entre em contato e receba a nossa visita na sua empresa.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://copatecnologia.com.br" # the base hostname & protocol for your site
+timezone: UTC
+collections:
+  educacional:
+    title: Educacional
+    output: true
+  posts:
+    title: Posts
+    output: true
+  sections:
+    title: Sections
+    output: false
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+- scope:
+    path: ''
+    type: educacional
+  values:
+    layout: educacional
+    permalink: "/:name/"
+description: 'Produção audiovisual, editorial, web e comunicação corporativa.  Conteúdos
+  educacionais, institucionais online e offline. Entre em contato e receba a nossa
+  visita na sua empresa.
 
-# Build settings
-exclude: 
-  - gulpfile.js
-  - README.md
-  - desktop.ini
+'
+baseurl: ''
+url: http://copatecnologia.com.br
+exclude:
+- gulpfile.js
+- README.md
+- desktop.ini
 markdown: kramdown
-
 sass:
   style: compressed
-
 plugins:
-  - jekyll-coffeescript
-
-collections:
-  sections:
-    output: false
-  educacional:
-    output: true
-
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-  - scope:
-      path: ""
-      type: educacional
-    values:
-      layout: educacional
-      permalink: /:name/
+- jekyll-coffeescript
